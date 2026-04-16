@@ -37,7 +37,8 @@ var ankyjs = (() => {
     UnauthorizedException: () => UnauthorizedException,
     finalise: () => finalise,
     httpException: () => httpException,
-    rand: () => rand
+    rand: () => rand,
+    randint: () => randint
   });
 
   // src/util.js
@@ -49,6 +50,9 @@ var ankyjs = (() => {
     return obj;
   }
   function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  function randint(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 

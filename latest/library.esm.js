@@ -9,6 +9,9 @@ function finalise(obj, seen = /* @__PURE__ */ new WeakSet()) {
   return obj;
 }
 function rand(min, max) {
+  return Math.random() * (max - min) + min;
+}
+function randint(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
@@ -193,6 +196,7 @@ export {
   UnauthorizedException,
   finalise,
   httpException,
-  rand
+  rand,
+  randint
 };
 //# sourceMappingURL=library.esm.js.map
